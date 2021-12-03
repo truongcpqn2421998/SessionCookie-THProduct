@@ -11,14 +11,24 @@ public class Product {
     private String name;
     private double price;
     private String description;
+    private String anh;
 
     public Product() {
     }
 
-    public Product(String name, double price, String description) {
+    public Product(Long id, String name, double price, String description, String anh) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
+        this.anh = anh;
+    }
+
+    public Product(String name, double price, String description, String anh) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.anh = anh;
     }
 
     public Long getId() {
@@ -51,5 +61,13 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getAnh() {
+        return anh;
+    }
+
+    public void setAnh(String anh) {
+        this.anh = anh;
     }
 }
